@@ -1,0 +1,80 @@
+/* vars */
+:root {
+    /* typography */
+    --primary-font-family: "Georgia";
+    --secondary-font-family: "Verdana";
+    --primary-font-color: #222;
+    --secondary-font-color: #000;
+
+    /* color palette */
+    --primary-color: #007997;
+    --secondary-color: #97002b;
+
+    /* partially typography based layout */
+    --common-padding: 0 5vw;
+    --min-width: 360px;
+    --em-factor: 1;
+    --est-char-width: calc((var(--em-factor) * 16px) / 2); /* const 2 stands for approximate character width */
+    --optimal-line-width: calc(var(--est-char-width) * 70); /* roughtly estimating width on optimal number of characters per line */
+}
+
+    /* fixing width calculation for high dpr device */
+   
+   /* possible TODO: invent mechanims to feed var into media query without looping*/
+    @media only screen and (min-resolution:2dppx) {
+         :root {--em-factor:2}
+    }
+
+    @media only screen and (min-resolution: 3dppx) {
+         :root {--em-factor:3}
+    }
+
+/* styles */
+
+body {
+    font-family: var(--primary-font-family);
+    color: var(--primary-font-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-family: var( --secondary-font-family);
+}
+
+
+main, footer {
+    box-sizing: border-box;
+    padding: var(--common-padding);
+    min-width: var(--min-width);
+    max-width: var(--optimal-line-width);
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+}
+
+.h1 {
+    color: var(--secondary-font-color);
+    font-size: 2.5em;   
+    margin-bottom: 0.1em;
+}
+
+.h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
+}
+
+    .h2 + p {
+        margin-top: 0;
+    }
+
+.meta {
+    margin-top: 0;
+    margin-bottom: 3em;
+    color: #888;
+}
+
+
+
