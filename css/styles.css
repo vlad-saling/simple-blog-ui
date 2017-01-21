@@ -1,3 +1,5 @@
+/* TODO em factor should be taken into account in all em-based calculations */
+
 /* vars */
 :root {
     /* typography */
@@ -42,6 +44,10 @@ a {
     font-family: var( --secondary-font-family);
 }
 
+header {
+    border-bottom: 4px solid var(--primary-color);
+    margin-bottom: 2em;
+}
 
 main, footer {
     box-sizing: border-box;
@@ -53,6 +59,9 @@ main, footer {
 
 footer {
     text-align: center;
+    color: var(--primary-color);
+    padding: 1em 0;
+    font-size: .75em;
 }
 
 .h1 {
