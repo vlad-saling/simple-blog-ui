@@ -1,3 +1,9 @@
+/* 
+
+To use most advanced version of this css set Enable >> chrome://flags/#enable-experimental-web-platform-features. Otherwise your browser will use fallbacks.
+
+*/
+
 /* TODO em factor should be taken into account in all em-based calculations */
 
 /* vars */
@@ -5,7 +11,7 @@
     /* typography */
     --primary-font-family: "Georgia";
     --secondary-font-family: "Verdana";
-    --primary-font-color: #222;
+    --primary-font-color: #333;
     --secondary-font-color: #000;
 
     /* color palette */
@@ -13,23 +19,27 @@
     --secondary-color: #97002b;
 
     /* partially typography based layout */
-    --common-padding: 0 5vw;
+    --common-padding: 0 10px;
     --min-width: 360px;
     --em-factor: 1;
     --est-char-width: calc((var(--em-factor) * 16px) / 2); /* const 2 stands for approximate character width */
     --optimal-line-width: calc(var(--est-char-width) * 70); /* roughtly estimating width on optimal number of characters per line */
 }
-
     /* fixing width calculation for high dpr device */
    
-   /* possible TODO: invent mechanims to feed var into media query without looping*/
+    /* possible TODO: invent mechanims to feed var into media query without looping*/
+    @media only screen and (min-resolution:1.5dppx) {
+        :root {--em-factor:1.5}
+    }
+
     @media only screen and (min-resolution:2dppx) {
-         :root {--em-factor:2}
+        :root {--em-factor:2}
     }
 
     @media only screen and (min-resolution: 3dppx) {
-         :root {--em-factor:3}
+        :root {--em-factor:3}
     }
+
 
 /* styles */
 
@@ -66,13 +76,15 @@ footer {
 
 .h1 {
     color: var(--secondary-font-color);
-    font-size: 2.5em;   
+    font-size: 2.25em;   
     margin-bottom: 0.1em;
 }
 
 .h2 {
+    font-weight: normal;
     margin-top: 1.5em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
+
 }
 
     .h2 + p {
@@ -80,9 +92,12 @@ footer {
     }
 
 .meta {
+    font-size: 0.8em;
+    font-family: var(--secondary-font-family);
     margin-top: 0;
     margin-bottom: 3em;
     color: #888;
+
 }
 
 
