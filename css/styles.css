@@ -113,6 +113,11 @@ header {
             text-decoration: underline;
         }
 
+            .header-links__home > h1 {
+                font: inherit;
+                margin: inherit;
+            }
+
 
 footer {
     text-align: center;
