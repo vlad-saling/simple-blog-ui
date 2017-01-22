@@ -118,6 +118,19 @@ header {
                 margin: inherit;
             }
 
+        .toolbar {
+            /* root block */
+        }
+
+            .toolbar > li > a {
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+
+            .toolbar > li > a:hover {
+                text-decoration: underline;
+            }
+
 
 footer {
     text-align: center;
@@ -153,6 +166,7 @@ footer {
 
 .taglist {
     font-size: var(--meta-font-size);
+    padding: 1.5em 0 0;
 }
     .taglist > li {
         background-color: var(--primary-color);
