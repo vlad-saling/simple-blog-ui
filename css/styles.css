@@ -48,6 +48,26 @@ body {
 
 a {
     font-family: var( --secondary-font-family);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.h1 {
+    color: var(--secondary-font-color);
+    font-size: 2.25em;   
+    margin-bottom: 0.1em;
+}
+
+.h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5em;
+
 }
 
 .container {
@@ -68,6 +88,13 @@ Limiting flex element to half mean 50% basis. So e.g. for three elements one wou
     flex-basis: 50%;
 }
 
+.img {
+    /* root block */
+}
+
+    .img--round {
+        border-radius: 50%;
+    }
 
 /* common class transforming list links into link row*/
 
@@ -105,12 +132,7 @@ header {
 
         .header-links__home {
             color: var(--primary-color);
-            text-decoration: none;
             font-weight: bold;
-        }
-
-        .header-links__home:hover {
-            text-decoration: underline;
         }
 
             .header-links__home > h1 {
@@ -119,17 +141,13 @@ header {
             }
 
         .toolbar {
-            /* root block */
+            color: var(--primary-color);
         }
 
             .toolbar > li > a {
-                color: var(--primary-color);
-                text-decoration: none;
+                color: inherit;
             }
 
-            .toolbar > li > a:hover {
-                text-decoration: underline;
-            }
 
 
 footer {
@@ -139,22 +157,7 @@ footer {
     font-size: var(--meta-font-size);
 }
 
-.h1 {
-    color: var(--secondary-font-color);
-    font-size: 2.25em;   
-    margin-bottom: 0.1em;
-}
 
-.h2 {
-    font-weight: normal;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-
-}
-
-    .h2 + p {
-        margin-top: 0;
-    }
 
 .meta {
     font-size: var(--meta-font-size);
@@ -176,12 +179,8 @@ footer {
 
     .taglist > li > a {
         color: #fff;
-        text-decoration: none;
     }
 
-    .taglist > li > a:hover {
-        text-decoration: underline;
-    }
 
 
 
