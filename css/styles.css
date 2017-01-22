@@ -8,6 +8,7 @@
     --secondary-font-family: "Verdana";
     --primary-font-color: #333;
     --secondary-font-color: #000;
+    --meta-font-size: 0.75em;
 
     /* color palette */
     --primary-color: #007997;
@@ -57,6 +58,40 @@ a {
     margin: 0 auto;
 }
 
+/* flex tools */
+
+/* 
+This will make sure, that flex element won't push over less rich elements 
+Limiting flex element to half mean 50% basis. So e.g. for three elements one would need basis on 33,333%
+*/
+.flex--half {
+    flex-basis: 50%;
+}
+
+
+/* common class transforming list links into link row*/
+
+.list {
+    /*root block*/
+}
+
+    .list--vertical {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .list--vertical > li {
+            display: inline-block;
+            padding-right: 10px;
+        }
+
+        .list--right-aligned > li {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+
+
 header {
     border-bottom: 4px solid var(--primary-color);
     margin-bottom: 1em;
@@ -71,13 +106,19 @@ header {
         .header-links__home {
             color: var(--primary-color);
             text-decoration: none;
+            font-weight: bold;
         }
+
+        .header-links__home:hover {
+            text-decoration: underline;
+        }
+
 
 footer {
     text-align: center;
     color: var(--primary-color);
     padding: 1em 0;
-    font-size: .75em;
+    font-size: var(--meta-font-size);
 }
 
 .h1 {
@@ -98,28 +139,33 @@ footer {
     }
 
 .meta {
-    font-size: 0.8em;
+    font-size: var(--meta-font-size);
     font-family: var(--secondary-font-family);
     margin-top: 0;
     margin-bottom: 3em;
     color: #888;
 }
 
-/* common class transforming list links into link row*/
-
-.list {
-    /*root block*/
+.taglist {
+    font-size: var(--meta-font-size);
 }
-
-    .list--vertical {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+    .taglist > li {
+        background-color: var(--primary-color);
+        padding: 5px;
+        text-align: center;
     }
 
-        .list--vertical > li {
-            display: inline-block;
-            padding-left: 10px;
-        }
+    .taglist > li > a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .taglist > li > a:hover {
+        text-decoration: underline;
+    }
+
+
+
+
 
 
