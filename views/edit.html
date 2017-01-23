@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/styles.css" rel="stylesheet">
+        <title>Blog article title</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container header-links flex">
+                <a class="header-links__home flex__cell flex__cell--just-enough" href="#">My blog</a>
+
+                <ul class="list list--horizontal list--right-aligned toolbar">
+                    <li><a href="#" class="btn btn--primary">Save</a></li>
+                    <li><a href="#" class="btn btn--primary">Preview</a></li>
+                    <li><a href="#" class="btn btn--secondary">Remove</a></li>
+                    <li><a href="#" class="btn btn--secondary">Cancel</a></li>
+                    <li><a href="#" class="btn">Sign out</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="container">
+            <h1 class="hidden">Edit article mode</h1>
+
+            <label for="article-image">Image:</label><br />
+            <input id="article-image" type="file" name="article-image"  /><br />
+
+            <label for="article-title">Title:</label><br />
+            <input id="article-title" type="text" name="article-title" value="Blog article title" />
+            <p class="meta">by Name Surname on 19.1.2017</p>
+
+
+
+            <label for="article-body">Article body:</label><br />
+            <textarea id="article-body" name="article-body" style="width: 100%; height: 500px;">
+<h2 class="h2">Deflector power at maximum</h2>
+
+<p>
+    Deflector power at maximum. Energy discharge in six seconds. Warp reactor core primary coolant failure. Fluctuate phaser resonance frequencies. Resistance is futile. Recommend we adjust shield harmonics to the upper EM band when proceeding. These appear to be some kind of power-wave-guide conduits which allow them to work collectively as they perform ship functions. Increase deflector modulation to upper frequency band.
+</p>
+
+<p>
+    Shields up. I recommend we transfer power to phasers and arm the photon torpedoes. Something strange on the detector circuit. The weapons must have disrupted our communicators. You saw something as tasty as meat, but inorganically materialized out of patterns used by our transporters. Captain, the most elementary and valuable statement in science, the beginning of wisdom, is 'I do not know.' All transporters off.
+</p>
+
+<h2 class="h2"> Unidentified vessel</h2>
+
+<p>
+    Unidentified vessel travelling at sub warp speed, bearing 235.7. Fluctuations in energy readings from it, Captain. All transporters off. A strange set-up, but I'd say the graviton generator is depolarized. The dark colourings of the scrapes are the leavings of natural rubber, a type of non-conductive sole used by researchers experimenting with electricity. The molecules must have been partly de-phased by the anyon beam.
+</p>
+            </textarea>
+
+            
+
+            <label for="article-tags">Tags:</label><br />
+            <input id="article-tags" type="text" name="article-tags" value="blog, template" />
+
+
+
+        </main>
+
+        <footer class="container">
+            <p>Copyright © 2017</p>
+        </footer>
+
+    </body>
+</html>
