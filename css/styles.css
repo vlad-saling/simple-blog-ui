@@ -274,6 +274,9 @@ footer {
     display: block;
     font-weight: bold;
     font-family: var(--secondary-font-family);
-    font-size: var(--meta-font-size);
-    margin: 1em 0 0.25em;
+    margin: 2em 0 0.25em;
+}
+
+textarea, input {
+    font-size: 0.875em;
 }
