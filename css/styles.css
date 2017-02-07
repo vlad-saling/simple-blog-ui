@@ -186,7 +186,7 @@ footer {
     font-family: var(--secondary-font-family);
     margin-top: 0;
     margin-bottom: 3em;
-    color: #888;
+    color: #595959;
 }
 
 /* extends .list .list--horizontal */
