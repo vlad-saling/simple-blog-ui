@@ -17,7 +17,7 @@
     /* partially typography based layout */
     --common-padding: 10px;
     --min-width: 360px;
-    --optimal-line-width: calc((1em/2.2) * 70); /* roughtly estimating width on optimal number of characters per line */
+    --optimal-line-width: calc((1em/2.2) * 85); /* roughtly estimating width on optimal number of characters per line */
 }
 
 /* styles */
